@@ -90,18 +90,14 @@ public class Menu {
 				break;
 			}
 		}
-
 	}
-    
 	public static void sobre() {
 		System.out.println("\n*********************************************************");
-		System.out.println("Projeto Desenvolvido por: ");
-		System.out.println("Generation Brasil - generation@generation.org");
-		System.out.println("github.com/conteudoGeneration");
+		System.out.println("Projeto Desenvolvido por: Aline Maciel ");
+		System.out.println("Generation Brasil - alinemaciel04@gmail.com");
+		System.out.println("https://github.com/AlineMaciel0402");
 		System.out.println("*********************************************************");
 	}
-		
-
 	}
 
 
