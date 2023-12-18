@@ -1,5 +1,9 @@
 package conta.model;
 
+import java.util.Scanner;
+
+import conta.util.Cores;
+
 public class Conta {
 
 	private int numero;
@@ -97,5 +101,10 @@ public boolean sacar(float valor) {
 		System.out.println("Titular: " + this.titular);
 		System.out.println("Saldo: " + this.saldo);
 
+	}
+
+	public void visualizarInformaçõesDaConta(Scanner leia) {
+		// TODO Auto-generated method stub
+		
 	}
   }
