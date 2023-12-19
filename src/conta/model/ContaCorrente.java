@@ -1,16 +1,14 @@
 package conta.model;
 
-import java.util.Scanner;
-
 public class ContaCorrente extends Conta{
-	
-	private float limite;
-	
-	public ContaCorrente(int numero, int agencia, int tipo, String titular, float saldo) {
-		super(numero, agencia, tipo, titular, saldo);
-		// TODO Auto-generated constructor stub
-	}
 
+	private float limite;
+
+	public ContaCorrente(int numero, int agencia, int tipo, String titular, float saldo, float limite) {
+		super(numero, agencia, tipo, titular, saldo);
+		this.limite = limite;
+	}
+	
 	public float getLimite() {
 		return limite;
 	}
@@ -20,21 +18,22 @@ public class ContaCorrente extends Conta{
 	}
 
 	@Override
-	public boolean sacar(float valor) {
+	public boolean sacar(float valor) { 
 		
-		if(valor > getSaldo() + getLimite()) {
-			System.out.println("Seu saldo é insuficiente!");
+		if(this.getSaldo() + this.getLimite() < valor) {
+			System.out.println("\n Saldo Insuficiente!");
 			return false;
 		}
 		
-		setSaldo(getSaldo() - valor);
+		this.setSaldo(this.getSaldo() - valor);
 		return true;
+		
 	}
-	@Override
-	public void visualizarInformaçõesDaConta(Scanner leia) {
-		super.visualizarInformaçõesDaConta(leia); 
-		System.out.println("Limite: " + this.limite);
-		System.out.println("*************************************************");
-
-	}	
+	
+    @Override
+	public void visualizar() {
+		super.visualizar();
+		System.out.println("Limite de Crédito: " + this.limite);
+	}
+    
 }

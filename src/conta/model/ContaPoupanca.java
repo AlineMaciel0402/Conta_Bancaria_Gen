@@ -1,30 +1,26 @@
 package conta.model;
 
-import java.util.Scanner;
+public class ContaPoupanca extends Conta{
 
-public class ContaPoupança extends Conta{
-	
-	private float valor;
+	private int aniversario;
 
-	public ContaPoupança(int numero, int agencia, int tipo, String titular, float saldo, float valor) {
+	public ContaPoupanca(int numero, int agencia, int tipo, String titular, float saldo, int aniversario) {
 		super(numero, agencia, tipo, titular, saldo);
-		this.valor = valor;
+		this.aniversario = aniversario;
 	}
 
-	public float getValor() {
-		return valor;
+	public int getAniversario() {
+		return aniversario;
 	}
 
-	public void setValor(float valor) {
-		this.valor = valor;
+	public void setAniversario(int aniversario) {
+		this.aniversario = aniversario;
 	}
-
-	@Override
-	public void visualizarInformaçõesDaConta(Scanner leia) {
-		super.visualizarInformaçõesDaConta(leia);
-		System.out.println("Aniversário: " + this.valor);
-		System.out.println("*************************************************");
+	
+    @Override
+	public void visualizar() {
+		super.visualizar();
+		System.out.println("Aniversário da conta: " + this.aniversario);
 	}
+    
 }
-
-
