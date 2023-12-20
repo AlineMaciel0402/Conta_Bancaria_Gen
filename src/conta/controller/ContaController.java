@@ -63,9 +63,9 @@ public class ContaController implements ContaRepository {
         
         if (conta != null) {
         	if (conta.sacar(valor) == true)
-        		System.out.println("\nSaque na Conta numero: " + numero + "foi efetuado com sucesso!");
+        		System.out.println("\nSaque na Conta numero: " + numero + " foi efetuado com sucesso!");
         }else {
-        	System.out.println("\nConta número" + numero + "não foi encontrada!");
+        	System.out.println("\nConta número: " + numero + " não foi encontrada!");
         }
         
     }
@@ -76,9 +76,9 @@ public class ContaController implements ContaRepository {
     	
     	if(conta != null) {
     	conta.depositar(valor);
-    		System.out.println("\nDepósito na conta " + numero + "foi efetuado com sucesso!");
+    		System.out.println("\nDepósito na conta " + numero + " foi efetuado com sucesso!");
     	}else {
-    		System.out.println("\nA conta número: " + numero + "não foi encontrada ou a conta"
+    		System.out.println("\nA conta número " + numero + " não foi encontrada ou a conta"
     				+ "de destino não é uma conta Corrente!");
     	}
   
