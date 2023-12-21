@@ -56,7 +56,7 @@ public class Menu {
 		System.out.println("            9 - Sair                                 ");
 		System.out.println("                                                     ");
 		System.out.println("*****************************************************");
-		System.out.println("         Entre com a opção desejada:                   ");
+		System.out.println("         Entre com a opção desejada:                 ");
 		System.out.println("                                                     " + Cores.TEXT_RESET);
 			
 		try {
@@ -211,20 +211,18 @@ public class Menu {
 				break;
 					
 			case 8:
-				System.out.println(Cores.TEXT_WHITE + "Transferência entre Contas\n\n");
+				System.out.print("\nTransferência entre Contas\n\n");
 				System.out.print("Digite o número da conta de origem: ");
 				numero = leia.nextInt();
 				System.out.print("Digite o número da conta de destino: ");
 				numeroDestino = leia.nextInt();
-					
+				
 				do {
-					System.out.print("Digite o valor da transferência (R$): ");
+					System.out.print("Digite o valor da transferência R$");
 					valor = leia.nextFloat();
-				}while (valor <= 0 );
-					
+				}while(valor <= 0);
 				contas.transferir(numero, numeroDestino, valor);
-			
-                keyPress();
+				keyPress();
 				break;
 					
 			default:
